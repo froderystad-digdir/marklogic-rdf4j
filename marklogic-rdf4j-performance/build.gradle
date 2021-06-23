@@ -39,7 +39,7 @@ dependencies {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.4'
+    gradleVersion = '4.5.1'
 }
 
 jmh {
