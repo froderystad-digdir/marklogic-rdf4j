@@ -21,8 +21,8 @@ jacoco{toolVersion="0.7.4.201502262128"}
 compileJava.options.encoding = 'UTF-8'
 
 configure(allprojects){
-            ext.slf4jVersion = '1.7.2'
-            ext.logbackVersion = '1.0.9'
+            ext.slf4jVersion = '1.7.25'
+            ext.logbackVersion = '1.2.3'
 }
 
 sourceCompatibility = "1.8"
@@ -43,13 +43,13 @@ jacocoTestReport {
 dependencies {
     compile('org.eclipse.rdf4j:rdf4j-runtime:2.4.3')
 
-    compile('com.marklogic:marklogic-client-api:4.2.0') {
+    compile('com.marklogic:marklogic-client-api:5.4.0') {
         exclude(group: 'org.slf4j')
         exclude(group: 'ch.qos.logback')
         exclude(group: 'javax.ws.rs')
     }
     compile "javax.ws.rs:javax.ws.rs-api:2.1@jar"
-    compile('org.slf4j:slf4j-api:1.7.10')
+    compile "org.slf4j:slf4j-api:$slf4jVersion"
     compile "ch.qos.logback:logback-classic:$logbackVersion"
     compile "org.slf4j:jcl-over-slf4j:$slf4jVersion"
 

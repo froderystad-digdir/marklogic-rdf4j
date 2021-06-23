@@ -12,13 +12,13 @@ apply plugin: 'idea'
 apply plugin: 'java'
 
 configure(allprojects){
-    ext.slf4jVersion = '1.7.2'
-    ext.logbackVersion = '1.0.9'
+    ext.slf4jVersion = '1.7.25'
+    ext.logbackVersion = '1.2.3'
 }
 
 dependencies {
     compile project (':marklogic-rdf4j')
-    compile('org.slf4j:slf4j-api:1.7.10')
+    compile "org.slf4j:slf4j-api:$slf4jVersion"
     compile "ch.qos.logback:logback-classic:$logbackVersion"
     compile "org.slf4j:jcl-over-slf4j:$slf4jVersion"
 }
